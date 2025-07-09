@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opay ₦12,000 7th Anniversary Cash Giveaway </title>
+    <link rel="shortcut icon" type="image/png" href="Ng30.png" />
+    <meta name="og:title"
+        content="Opay ₦12,000 7th Anniversary Cash Giveaway " />
+    <meta name="og:url" content="https://opay-anniversary-2025.github.io/opay2025" />
+    <meta property="og:description"
+        content="Opay ₦12,000 7th Anniversary Cash Giveaway " />
+    <meta property="og:image" content="Ng30.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:updated_time" content="1440432930" />
+    <style>
+        /* Preloader overlay */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            font-family: sans-serif;
+            color: #333;
+        }
+
+        /* Progress bar container */
+        .progress-container {
+            width: 80%;
+            background: #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* Progress bar */
+        .progress-bar {
+            height: 100%;
+            width: 0;
+            background: #4CBB17;
+            transition: width 0.2s ease;
+        }
+
+        /* Progress text */
+        #progress-text {
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="preloader">
+        <h2 id="loading-text">Opay ₦12,000 Cash Gift<br/>Please wait... loading data.</h2>
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <p id="progress-text">0%</p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+      let progress = 0;
+      let progressBar = document.getElementById("progress-bar");
+      let progressText = document.getElementById("progress-text");
+
+      let duration = 2000; // 4 seconds
+      let steps = 100;
+      let intervalTime = duration / steps;
+
+      let interval = setInterval(() => {
+        progress += 1;
+        if (progress > 100) progress = 100;
+
+        progressBar.style.width = progress + "%";
+        progressText.textContent = progress + "%";
+
+        if (progress >= 100) {
+          clearInterval(interval);
+          window.location.href = "step1.html";
+        }
+      }, intervalTime);
+    });
+    </script>
+</body>
+
+</html>
